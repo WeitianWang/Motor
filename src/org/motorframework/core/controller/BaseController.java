@@ -21,6 +21,8 @@ public class BaseController {
 	protected final String FORUPDATE = "forUpdate";
 	protected final String FORDETAIL = "forDetail";
 	protected final String FORLIST = "forList";
+	protected final String ERROR = "error";
+	
 	protected Map<String, Object> returnMap = new HashMap<String, Object>();
 	
 	/**

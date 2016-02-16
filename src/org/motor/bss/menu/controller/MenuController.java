@@ -42,6 +42,14 @@ public class MenuController extends BaseController{
 		return viewPath + FORADD;
 	}
 	
+	@RequestMapping(value="/forUpdate.do")
+	public String forUpdate(@RequestParam(value="id",defaultValue="") String id,HttpServletRequest request){
+		if(id==null||"".equals(id)){
+			request.setAttribute("error", "菜单主键为空，请联系管理员");
+			return viewPath + ERROR;
+		}
+		return viewPath + FORUPDATE;
+	}
 	@RequestMapping(value="/forDetail.do")
 	public String forDetail(){
 		return viewPath + FORDETAIL;

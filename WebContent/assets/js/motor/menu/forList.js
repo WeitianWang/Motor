@@ -113,6 +113,23 @@ $(function(){
 	$('#updateBtn').on('click',function(){
 		var node = getActiveNode();
 		if(!node) return;
+		$('#detailContent').load('../bss/menu/forDetail.do?id='+node.id,function(){
+//			var	data = node.data,key,value;
+//			for(key in data){
+//				if(key=='target'){
+//					value = data.target;
+//					$('#target').text(value=='_blank'?'新窗口':'默认');
+//					continue;
+//				}
+//				$('#'+key).text(data[key]);
+//			}
+//			$('#icon').text(node.icon);
+//			$('#iconStyle').addClass(node.icon);
+//			$('#detailModal').modal('show');
+//			$('#detailModal').on('hide.bs.modal', function () {
+//				$('#detailForm').html(null);
+//			});
+		});
 	});
 	//删除
 	$('#delBtn').on('click',function(){
