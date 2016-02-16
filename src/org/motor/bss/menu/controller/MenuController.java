@@ -79,4 +79,13 @@ public class MenuController extends BaseController{
 		
 		renderJson(getReturnJson(), response);
 	}
+	
+	@RequestMapping(value="/getMenuTree.do")
+	public void getMenuTree(HttpServletResponse response){
+		List<Menu> list = service.getList();
+		
+		MenuTree t = new MenuTree(list);
+		
+		renderJson(JSONArray.fromObject(t.getTree()).toString(), response);
+	}
 }

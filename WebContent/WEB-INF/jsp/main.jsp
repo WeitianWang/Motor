@@ -97,6 +97,7 @@
       </footer>
 	</div>
 	<script type="text/javascript" src="../assets/js/jquery.js"></script>
+	<script type="text/javascript" src="../assets/js/motor/common.js"></script>
 	<script type="text/javascript" src="../assets/bootstrap/js/bootstrap.js"></script>
 	<script type="text/javascript" src="../assets/lib/sweetalert/sweetalert.min.js"></script>
 	<script type="text/javascript" src="../assets/lib/sidebar/search/MotorSearchForm.js"></script>

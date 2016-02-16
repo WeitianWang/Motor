@@ -109,7 +109,11 @@ $(function(){
 			});
 		});
 	});
-	
+	//修改
+	$('#updateBtn').on('click',function(){
+		var node = getActiveNode();
+		if(!node) return;
+	});
 	//删除
 	$('#delBtn').on('click',function(){
 		var node = getActiveNode();

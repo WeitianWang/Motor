@@ -101,6 +101,24 @@
 			</div><!-- /.modal-content -->
 		</div><!-- /.modal-dialog -->
 	</div><!-- /.modal -->
+	<!-- 修改模态框（Modal） -->
+	<div class="modal fade" id="updateModal" role="dialog" aria-labelledby="addModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header" style="background-color: #1BBC9B;color: white;">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="addModalLabel">修改菜单</h4>
+				</div>
+				<div id="updateContent" class="modal-body form-group">
+		        	<!-- /修改页面 -->
+		        </div>
+		        <div class="modal-footer">
+		            <button id="saveBtn" type="button" class="btn btn-primary">保存</button>
+		            <button type="button" class="btn btn-danger" data-dismiss="modal">关闭</button>
+		        </div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
 </div>
 </div>
 <script type="text/javascript" src="<%=basePath %>assets/js/motor/menu/forList.js"></script>

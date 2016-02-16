@@ -36,7 +36,8 @@ public class Menu implements Serializable{
 	private Integer order;
 	private String target;
 	private List<Menu> children = new ArrayList<Menu>();
-	
+	private String clazz;
+
 	/**
 	 * 以下属性为fancyTree空件所需属性
 	 */
@@ -147,9 +148,8 @@ public class Menu implements Serializable{
 		return name;
 	}
 
-	
-//	@Transient
-//	public String getExtraClasses() {
-//		return icon;
-//	}
+	@Transient
+	public String getClazz() {
+		return this.icon;
+	}
 }

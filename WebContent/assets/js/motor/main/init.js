@@ -51,16 +51,32 @@ $(function(){
 			children:[]
 		}
 	];
-	var opt = {
-			data:items,
-			onClick:function(menu){
-				if(menu['url']){
-					$('#content').load('http://localhost:8080/Motor/'+menu['url'],{d:new Date()});
-					//$('#runtime').attr('src','http://localhost:8080/Motor/'+menu['url']);
-				}
-			}
-	};
-	$('#menu').MotorMenu(opt);
+//	var opt = {
+//			data:items,
+//			onClick:function(menu){
+//				if(menu['url']){
+//					$('#content').load('http://localhost:8080/Motor/'+menu['url'],{d:new Date()});
+//					//$('#runtime').attr('src','http://localhost:8080/Motor/'+menu['url']);
+//				}
+//			}
+//	};
+	$.ajax({
+		type:'post',
+		url:Common.getBasePath()+'/bss/menu/getMenuTree.do',
+		success:function(d){
+			var opt = {
+					data:d,
+					onClick:function(menu){
+						//alert(menu['url'])
+						$('#content').load('http://localhost:8080/Motor/bss/menu/forList.do');
+						if(menu['url']){
+							//$('#content').load(Common.getBasePath()+'/'+menu['url'],{d:new Date()});
+						}
+					}
+			};
+			$('#menu').MotorMenu(opt);
+		}
+	});
 	$('#searchForm').MotorSearchForm();
 	$('#user-panel').UserPanel();
 	//$('#header').Header();
