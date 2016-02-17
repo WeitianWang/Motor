@@ -6,7 +6,7 @@ import org.motorframework.core.dao.impl.GenericDaoImpl;
 import org.springframework.stereotype.Repository;
 
 /** 
- * @author Weitian Wang
+ * @author WeitienWong
  * 创建日期：2015年10月5日 下午4:24:41 
  * 类说明 ：
  */

@@ -19,7 +19,7 @@ import org.springframework.util.Assert;
  * <h3>类参数说明：</h3>
  * <p>T:泛型类，子类继承时需指定具体类型
  * <p>ID:持久化对象主键类型，必须为类，如String,Integer等
- * @author Weitian Wang 2015年9月28日 下午1:29:42 
+ * @author WeitienWong 2015年9月28日 下午1:29:42 
  * @since 1.0.0
  * @version 1.0.0
  * @see org.motorframework.core.dao.GenericDao
@@ -198,6 +198,7 @@ public class GenericDaoImpl<T,ID extends Serializable> implements GenericDao<T,I
 		Query query = this.createHqlQuery(hql, values);
 		return query.list();
 	}
+	
 	/**
      * <根据SQL语句，得到对应的list>
      * @param sql SQL语句
@@ -206,7 +207,6 @@ public class GenericDaoImpl<T,ID extends Serializable> implements GenericDao<T,I
      */
 	@Override
 	public List<T> getListBySql(String sql, Object... values) {
-		//Query query = this.createSqlQuery(sql, values);
 		SQLQuery query = this.getSession().createSQLQuery(sql).addEntity(genericClass);
 		wrapQuery(query, values);
 		return query.list();
@@ -271,4 +271,11 @@ public class GenericDaoImpl<T,ID extends Serializable> implements GenericDao<T,I
         this.getSession().update(t);
     }
     
+    /**
+	 * <获取对象list>
+	 * @return 对象集合
+	 */
+    public List<T> getList(){
+    	return this.getSession().createQuery("from "+genericClass.getName()).list();
+    }
 }

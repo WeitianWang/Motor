@@ -25,7 +25,8 @@ $(function(){
 		glyph: glyph_opts,
 		source: {url: "../bss/menu/getList.do", debugDelay: 1000},
 		renderColumns: function(event, data) {
-			var node = data.node,$tdList = $(node.tr).find(">td");
+			var node = data.node,
+				  $tdList = $(node.tr).find(">td");
 			$tdList.eq(1).text(node.data.uri);
 			$tdList.eq(2).text(node.icon);
 			$tdList.eq(3).text(node.data.target=='_blank'?'新窗口':'默认');
@@ -77,12 +78,10 @@ $(function(){
 						}else{
 							sweetAlert("Oops...", r.error, "error");
 						}
+						//情况对话框内容
+						$('#addForm').html(null);
 					}
 				});
-			});
-			//情况对话框内容
-			$('#addModal').on('hidden.bs.modal', function () {
-				$('#addForm').html(null);
 			});
 		});
 	});
@@ -109,28 +108,39 @@ $(function(){
 			});
 		});
 	});
+	
 	//修改
 	$('#updateBtn').on('click',function(){
 		var node = getActiveNode();
 		if(!node) return;
-		$('#detailContent').load('../bss/menu/forDetail.do?id='+node.id,function(){
-//			var	data = node.data,key,value;
-//			for(key in data){
-//				if(key=='target'){
-//					value = data.target;
-//					$('#target').text(value=='_blank'?'新窗口':'默认');
-//					continue;
-//				}
-//				$('#'+key).text(data[key]);
-//			}
-//			$('#icon').text(node.icon);
-//			$('#iconStyle').addClass(node.icon);
-//			$('#detailModal').modal('show');
-//			$('#detailModal').on('hide.bs.modal', function () {
-//				$('#detailForm').html(null);
-//			});
+		var url = '../bss/menu/forUpdate.do?id='+node.key+'&parentName='+node.parent.title;
+		$('#updateContent').load(url,function(){
+			$('#updateModal').modal('show');
+			//保存
+			$('#save2Btn').click(function(){
+				var form = $('#updateForm');
+				$.ajax({
+					url:form[0].action,
+					type:'post',
+					data:form.serialize(),
+					dataType:'json',
+					success:function(r){
+						if(r.success){
+							var m = r.menu
+							node.fromDict({
+								title:m.name,
+								data:m
+							});
+							$('#updateModal').modal('hide');
+							swal("修改成功!", '菜单已修改', "success");
+							$('#updateForm').html(null);
+						}
+					}
+				});
+			});
 		});
 	});
+	
 	//删除
 	$('#delBtn').on('click',function(){
 		var node = getActiveNode();

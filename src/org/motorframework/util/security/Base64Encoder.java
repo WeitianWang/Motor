@@ -5,7 +5,7 @@ import org.apache.tomcat.util.codec.binary.Base64;
 
 /** 
  * Base64编码解码工具类，基于org.apache.tomcat.util.codec.binary.Base64
- * @author Weitian Wang
+ * @author WeitienWong
  * 创建日期：2015年10月5日 下午9:24:32 
  * @since 1.0.0
  * @version 1.0.0

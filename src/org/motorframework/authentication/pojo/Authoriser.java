@@ -1,7 +1,7 @@
 package org.motorframework.authentication.pojo;
 /** 
  * 授权用户实体类。用于认证用户是否合法
- * @author Weitian Wang<br>
+ * @author WeitienWong<br>
  * 创建日期：2015年10月5日 下午2:06:43 
  * @since 1.0.0
  * @version 1.0.0

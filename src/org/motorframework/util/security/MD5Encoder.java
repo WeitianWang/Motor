@@ -6,7 +6,7 @@ import java.security.NoSuchAlgorithmException;
 
 /** 
  * MD5算法工具类
- * @author Weitian Wang 创建日期：2015年10月4日 下午11:20:01 
+ * @author WeitienWong 创建日期：2015年10月4日 下午11:20:01 
  * @since 1.0.0
  * @version 1.0.0
  */

@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 /** 
- * @author Weitian Wang
+ * @author WeitienWong
  * 创建日期：2015年10月2日 下午10:54:27 
  * 类说明 ：
  */

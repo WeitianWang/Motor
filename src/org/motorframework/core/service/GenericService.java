@@ -9,7 +9,7 @@ import java.io.Serializable;
  * <p>T:泛型类，子类继承时需指定具体类型
  * <p>ID:持久化对象主键类型，必须为类，如String,Integer等
  * 
- * @author Weitian Wang
+ * @author WeitienWong
  * @since 1.0.0
  * @version 1.0.0
  * 
@@ -40,4 +40,11 @@ public interface GenericService<T,ID extends Serializable> {
      * @return true或false
      */
 	public boolean deleteById(ID id);
+	
+	/**
+     * <更新实体>
+     * 
+     * @param t 实体对象
+     */
+	public void update(T t);
 }

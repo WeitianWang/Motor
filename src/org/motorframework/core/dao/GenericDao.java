@@ -10,7 +10,7 @@ import java.util.List;
  * <h3>类参数说明：</h3>
  * <p>T:泛型类，子类继承时需指定具体类型
  * <p>ID:持久化对象主键类型，必须为类，如String,Integer等
- * @author Weitian Wang 2015年9月28日 下午1:29:42 
+ * @author WeitienWong 2015年9月28日 下午1:29:42 
  * @since 1.0.0
  * @version 1.0.0
  */
@@ -114,4 +114,10 @@ public interface GenericDao<T,ID extends Serializable> {
      * @param t 实体对象
      */
 	public void update(T t);
+	
+	/**
+	 * <获取对象list>
+	 * @return 对象集合
+	 */
+	public List<T> getList();
 }

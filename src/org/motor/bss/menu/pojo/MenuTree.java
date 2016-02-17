@@ -6,7 +6,7 @@ import java.util.List;
 
 
 /**
- * @author Weitian Wang 创建日期：2016年1月14日 下午3:34:40
+ * @author WeitienWong 创建日期：2016年1月14日 下午3:34:40
  */
 public class MenuTree implements Serializable {
 

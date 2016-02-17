@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 /** 
  * 登陆Controller
- * @author Weitian Wang
+ * @author WeitienWong
  * 创建日期：2015年12月22日 下午7:04:31 
  */
 @Controller

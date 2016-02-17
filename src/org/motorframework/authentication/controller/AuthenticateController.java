@@ -12,7 +12,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /** 
- * @author Weitian Wang
+ * @author WeitienWong
  * 创建日期：2015年10月5日 下午4:50:55 
  * 类说明 ：
  */

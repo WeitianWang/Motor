@@ -10,7 +10,7 @@
 <html>
 <head>
 <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-<title>新增菜单2</title>
+<title>新增菜单</title>
 <link href="<%=basePath %>assets/lib/fancytree/skin-bootstrap/ui.fancytree.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="<%=basePath %>assets/lib/jqueryUI/jquery-ui.min.js"></script>
 <script type="text/javascript" src="<%=basePath %>assets/lib/fancytree/jquery.fancytree-all.min.js"></script>
@@ -113,7 +113,7 @@
 		        	<!-- /修改页面 -->
 		        </div>
 		        <div class="modal-footer">
-		            <button id="saveBtn" type="button" class="btn btn-primary">保存</button>
+		            <button id="save2Btn" type="button" class="btn btn-primary">修改</button>
 		            <button type="button" class="btn btn-danger" data-dismiss="modal">关闭</button>
 		        </div>
 			</div><!-- /.modal-content -->
@@ -121,6 +121,6 @@
 	</div><!-- /.modal -->
 </div>
 </div>
-<script type="text/javascript" src="<%=basePath %>assets/js/motor/menu/forList.js"></script>
+<script type="text/javascript" src="<%=basePath %>assets/js/motor/bss/menu/forList.js"></script>
 </body>
 </html>

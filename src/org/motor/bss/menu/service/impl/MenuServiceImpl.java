@@ -1,22 +1,19 @@
 package org.motor.bss.menu.service.impl;
 
 import java.util.List;
-
 import javax.annotation.Resource;
-
 import org.motor.bss.menu.dao.MenuDao;
 import org.motor.bss.menu.pojo.Menu;
 import org.motor.bss.menu.service.MenuService;
 import org.motorframework.core.dao.GenericDao;
 import org.motorframework.core.service.impl.GenericServiceImpl;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 /** 
- * @author Weitian Wang
+ * 系统菜单service实现类
+ * @author WeitienWong
  * 创建日期：2016年1月12日 上午10:50:51 
- * 类说明 ：
  */
 @Service(value="bss.menu.MenuServiceImpl")
 public class MenuServiceImpl extends GenericServiceImpl<Menu, String> implements MenuService{

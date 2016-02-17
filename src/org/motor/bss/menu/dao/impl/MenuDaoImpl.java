@@ -6,7 +6,8 @@ import org.motorframework.core.dao.impl.GenericDaoImpl;
 import org.springframework.stereotype.Repository;
 
 /** 
- * @author Weitian Wang
+ * 系统菜单Dao实现类
+ * @author WeitienWong
  * 创建日期：2016年1月12日 下午4:54:33 
  */
 @Repository(value="bss.menu.MenuDaoImpl")

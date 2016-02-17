@@ -3,7 +3,7 @@ package org.motor.bss.user.pojo;
 import java.io.Serializable;
 
 /** 
- * @author Weitian Wang
+ * @author WeitienWong
  * 创建日期：2015年10月2日 下午10:04:01 
  * 类说明 ：
  */

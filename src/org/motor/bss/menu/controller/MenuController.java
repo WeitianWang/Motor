@@ -1,24 +1,21 @@
 package org.motor.bss.menu.controller;
 
 import java.util.List;
-
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import net.sf.json.JSONArray;
-
 import org.motor.bss.menu.pojo.Menu;
 import org.motor.bss.menu.pojo.MenuTree;
 import org.motor.bss.menu.service.MenuService;
 import org.motorframework.core.controller.BaseController;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import net.sf.json.JSONArray;
 
 /** 
- * @author Weitian Wang
+ * 系统菜单Controller
+ * @author WeitienWong
  * 创建日期：2016年1月4日 上午10:29:41 
  */
 @Controller
@@ -43,11 +40,14 @@ public class MenuController extends BaseController{
 	}
 	
 	@RequestMapping(value="/forUpdate.do")
-	public String forUpdate(@RequestParam(value="id",defaultValue="") String id,HttpServletRequest request){
+	public String forUpdate(@RequestParam(value="id",defaultValue="") String id,@RequestParam(value="parentName",defaultValue="") String parentName,HttpServletRequest request){
 		if(id==null||"".equals(id)){
 			request.setAttribute("error", "菜单主键为空，请联系管理员");
 			return viewPath + ERROR;
 		}
+		Menu m = service.get(id);
+		request.setAttribute("menu", m);
+		request.setAttribute("parentName", parentName);
 		return viewPath + FORUPDATE;
 	}
 	@RequestMapping(value="/forDetail.do")
@@ -65,8 +65,16 @@ public class MenuController extends BaseController{
 	}
 	
 	@RequestMapping(value="/save.do")
-	public void save(@ModelAttribute Menu m,HttpServletResponse response){
+	public void save(Menu m,HttpServletResponse response){
 		service.save(m);
+		setReturnSucess();
+		returnMap.put("menu", m);
+		renderJson(getReturnJson(), response);
+	}
+	
+	@RequestMapping(value="/update.do")
+	public void update(Menu m,HttpServletResponse response){
+		service.update(m);
 		setReturnSucess();
 		returnMap.put("menu", m);
 		renderJson(getReturnJson(), response);

@@ -10,8 +10,6 @@
 <link rel="stylesheet" href="../assets/lib/sweetalert/sweetalert.css">
 <link rel="stylesheet" href="../assets/theme/AdminLTE/css/AdminLTE.css">
 <link rel="stylesheet" href="../assets/theme/AdminLTE/css/skins/_all-skins.min.css">
-<!-- <script data-main="../assets/js/motor/main/load" src="../assets/js/require.js" defer async="true"></script>
- -->
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 	<div class="wrapper">

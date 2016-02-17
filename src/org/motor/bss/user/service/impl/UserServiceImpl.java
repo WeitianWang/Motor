@@ -10,7 +10,7 @@ import org.motorframework.core.service.impl.GenericServiceImpl;
 import org.springframework.stereotype.Service;
 
 /** 
- * @author Weitian Wang
+ * @author WeitienWong
  * 创建日期：2015年10月2日 下午11:00:52 
  * 类说明 ：
  */

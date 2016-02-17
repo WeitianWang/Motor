@@ -6,7 +6,7 @@ import java.security.NoSuchAlgorithmException;
 
 /** 
  * SHA加密生成40位SHA码
- * @author Weitian Wang
+ * @author WeitienWong
  * 创建日期：2015年10月4日 下午11:45:51 
  */
 public class SHAEncoder implements MotorEncoder{

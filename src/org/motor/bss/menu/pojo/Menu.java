@@ -10,6 +10,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
+import javax.persistence.OrderBy;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 
@@ -19,7 +20,7 @@ import org.hibernate.annotations.GenericGenerator;
 
 /** 
  * 系统菜单实体类
- * @author Weitian Wang
+ * @author WeitienWong
  * 创建日期：2016年1月12日 下午3:25:55 
  */
 @Entity
