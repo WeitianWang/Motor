@@ -23,7 +23,6 @@
  	cursor: pointer;
  	margin-right: 10px;
  }
- 
 </style>
 </head>
 <body>

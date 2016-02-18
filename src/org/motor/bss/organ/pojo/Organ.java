@@ -7,6 +7,8 @@ import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 import javax.persistence.Table;
+import javax.persistence.Transient;
+
 import org.hibernate.annotations.GenericGenerator;
 
 /** 
@@ -17,7 +19,10 @@ import org.hibernate.annotations.GenericGenerator;
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED )
 @Table(name="M_ORGAN")
-public class Organ {
+public class Organ{
+
+	private static final long serialVersionUID = 1L;
+	
 	private String organCode;
 	private String organName;
 	private String abbr;
@@ -116,4 +121,13 @@ public class Organ {
 		this.comments = comments;
 	}
 	
+	@Transient
+	public String getKey(){
+		return this.organCode;
+	}
+	
+	@Transient
+	public String getTitle(){
+		return this.organName;
+	}
 }

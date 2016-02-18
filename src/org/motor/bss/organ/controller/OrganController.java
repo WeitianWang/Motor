@@ -1,15 +1,14 @@
 package org.motor.bss.organ.controller;
 
 import java.util.List;
-
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletResponse;
-
-import org.motor.bss.menu.pojo.Menu;
-import org.motor.bss.menu.pojo.MenuTree;
 import org.motor.bss.organ.pojo.Organ;
 import org.motor.bss.organ.service.OrganService;
 import org.motorframework.core.controller.BaseController;
+import org.motorframework.util.tree.Node;
+import org.motorframework.util.tree.Tree;
+import org.motorframework.util.tree.JsonTree;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -37,11 +36,12 @@ public class OrganController extends BaseController {
 	@RequestMapping(value="/getList.do")
 	public void getList(HttpServletResponse response){
 		List<Organ> list = service.getList();
-		for(Organ o : list){
-			System.out.println(JSONObject.fromObject(o));
-		}
-		//MenuTree t = new MenuTree(list);
-		
-		//renderJson(JSONArray.fromObject(t.getTree()).toString(), response);
+		JSONArray jarr = JSONArray.fromObject(list);
+		JsonTree t = new JsonTree(jarr);
+		t.setKey("organCode");
+		t.setParentKey("parentCode");
+		JSONArray arr = t.getTree();
+		System.out.println(arr);
+		renderJson(arr.toString(), response);
 	}
 }

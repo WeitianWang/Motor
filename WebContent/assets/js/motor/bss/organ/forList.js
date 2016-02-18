@@ -26,11 +26,12 @@ $(function(){
 		source: {url: "../bss/organ/getList.do", debugDelay: 1000},
 		renderColumns: function(event, data) {
 			var node = data.node,
-				  $tdList = $(node.tr).find(">td");
-			$tdList.eq(1).text(node.data.uri);
-			$tdList.eq(2).text(node.icon);
-			$tdList.eq(3).text(node.data.target=='_blank'?'新窗口':'默认');
-			$tdList.eq(4).text(node.data.order);
+				  $tdList = $(node.tr).find(">td"),
+				  organType = node.data.organType;
+			$tdList.eq(1).text(organType=='01'?'单位':(organType=='02'?'部门':'职工'));
+			$tdList.eq(2).text(node.data.tel);
+			$tdList.eq(3).text(node.data.fax);
+			$tdList.eq(4).text(node.data.addr);
 		}
 	});
 });

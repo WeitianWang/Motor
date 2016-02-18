@@ -4,8 +4,8 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-
 /**
+ * 菜单树实体类
  * @author WeitienWong 创建日期：2016年1月14日 下午3:34:40
  */
 public class MenuTree implements Serializable {
