@@ -31,16 +31,25 @@ public class JsonTree  implements Serializable {
 		return tree;
 	}
 	
+	/**
+	 * Create tree branch
+	 * @param parents
+	 * @return
+	 */
 	private JSONArray buildTree(JSONArray parents){
 		for(int i=0;i<parents.size();i++){
 			JSONObject parent = parents.getJSONObject(i);
 			JSONArray childArr = getChildren(parent.getString(key));
 			if(childArr.size()>0){
-				parent.put(childrenKey, childArr);
+				parent.put(childrenKey, buildTree(childArr));
 			}
 		}
 		return parents;
 	}
+	
+	/**
+	 * Get root nodes
+	 */
 	private void getRoots(){
 		Iterator it = this.nodes.iterator();
 		while(it.hasNext()){
@@ -53,6 +62,11 @@ public class JsonTree  implements Serializable {
 		}
 	}
 	
+	/**
+	 * Get child nodes by parent node-key
+	 * @param id   parent node-key
+	 * @return
+	 */
 	private JSONArray getChildren(String id){
 		JSONArray children = new JSONArray();
 		Iterator it = this.nodes.iterator();

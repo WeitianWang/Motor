@@ -43,14 +43,13 @@ $(function(){
 			return false;
 		}
 		return node;
-	}
+	};
 	
 	//新增
 	$('#addBtn').on('click',function(){
 		var table = $("#treetable").fancytree('getTree'),
 			node = table.getActiveNode(),
 			url='../bss/menu/forAdd.do';
-		//debugger;
 		if(node!=null){
 			url += '?pid='+node.key+'&parentName='+node.title;
 		}

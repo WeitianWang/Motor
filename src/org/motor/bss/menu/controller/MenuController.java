@@ -30,7 +30,6 @@ public class MenuController extends BaseController{
 	public String forList(){
 		return viewPath + FORLIST;
 	}
-	
 	@RequestMapping(value="/forAdd.do")
 	public String forAdd(@RequestParam(value="pid",defaultValue="") String pid,@RequestParam(value="parentName",defaultValue="顶层菜单(无上级)") String parentName,HttpServletRequest request){
 		request.setAttribute("pid", pid);

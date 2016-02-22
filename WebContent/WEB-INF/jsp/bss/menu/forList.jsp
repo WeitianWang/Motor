@@ -10,7 +10,7 @@
 <html>
 <head>
 <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-<title>新增菜单</title>
+<title>菜单管理</title>
 <link href="<%=basePath %>assets/lib/fancytree/skin-bootstrap/ui.fancytree.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="<%=basePath %>assets/lib/jqueryUI/jquery-ui.min.js"></script>
 <script type="text/javascript" src="<%=basePath %>assets/lib/fancytree/jquery.fancytree-all.min.js"></script>
@@ -27,7 +27,7 @@
 </head>
 <body>
 <div class="row">
-<div class="col-xs-12" style="">
+<div class="col-xs-12">
 	<div class="panel panel-primary">
 		<div class="panel-heading">
 			<b>

@@ -34,4 +34,58 @@ $(function(){
 			$tdList.eq(4).text(node.data.addr);
 		}
 	});
+	
+	//获取选中行
+	var getActiveNode = function(){
+		var table = $("#treetable").fancytree('getTree'),
+		node = table.getActiveNode();
+		if(node==null){
+			sweetAlert("Oops...", "请选择一行记录!", "warning");
+			return false;
+		}
+		return node;
+	};
+	
+	//新增
+	$('#addBtnList .add').on('click',function(){
+		var table = $("#treetable").fancytree('getTree'),
+			  node = table.getActiveNode(),
+			  url=Common.getBasePath()+'/bss/organ/forAdd.do',
+			  organType=$(this).attr('organType');
+		if(node==null&&organType!="01"){
+			//url += '?pid='+node.key+'&parentName='+node.title;
+			sweetAlert("Oops...", "顶级节点不允许创建"+$(this).text()+"，请先创建单位!", "warning");
+			return;
+		}
+		
+		$('#addContent').load(url,function(){
+			$('#addModal').modal('show');
+			//保存
+			$('#saveBtn').click(function(){
+				var _data = $('#addForm').serialize();
+				var form = $('#addForm');
+				$.ajax({
+					url:form[0].action,
+					type:'post',
+					data:form.serialize(),
+					dataType:'json',
+					success:function(r){
+						if(r.success){
+							if(node==null){
+								table.getFirstChild().addNode(r.menu,'before');
+							}else{
+								node.addChildren([r.menu]);
+							}
+							$('#addModal').modal('hide');
+							swal("保存成功!", '新增菜单已保存', "success");
+						}else{
+							sweetAlert("Oops...", r.error, "error");
+						}
+						//情况对话框内容
+						$('#addForm').html(null);
+					}
+				});
+			});
+		});
+	});
 });
