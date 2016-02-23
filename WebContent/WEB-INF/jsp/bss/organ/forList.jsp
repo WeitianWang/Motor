@@ -41,12 +41,12 @@
 		    <ul class="dropdown-menu">
 		      <li><a href="#" class="add" organType="01">单位</a></li>
 		      <li><a href="#" class="add" organType="02">部门</a></li>
-		      <li><a href="#" class="add" organType="03">岗位</a></li>
+		      <li><a href="#" class="add" organType="03">职位</a></li>
 		    </ul>
 		  </div>
-		  <button type="button" class="btn btn-default"><span class="fa fa-eye"></span>查看</button>
-		  <button type="button" class="btn btn-warning"><span class="fa fa-pencil-square-o"></span>修改</button>
-		  <button type="button" class="btn btn-danger"><span class="fa fa-trash"></span>删除</button>
+		  <button id="detailBtn" type="button" class="btn btn-default"><span class="fa fa-eye"></span>查看</button>
+		  <button id="updateBtn" type="button" class="btn btn-warning"><span class="fa fa-pencil-square-o"></span>修改</button>
+		  <button id="delBtn" type="button" class="btn btn-danger"><span class="fa fa-trash"></span>删除</button>
 		</div>
 		</div>
 		<div class="table-responsive">
@@ -104,6 +104,25 @@
 		        </div>
 		        <div class="modal-footer">
 		            <button id="saveBtn" type="button" class="btn btn-primary">保存</button>
+		            <button type="button" class="btn btn-danger" data-dismiss="modal">关闭</button>
+		        </div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+	
+	<!-- 修改模态框（Modal） -->
+	<div class="modal fade" id="updateModal" role="dialog" aria-labelledby="addModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header" style="background-color: #1BBC9B;color: white;">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="addModalLabel">修改菜单</h4>
+				</div>
+				<div id="updateContent" class="modal-body form-group">
+		        	<!-- /修改页面 -->
+		        </div>
+		        <div class="modal-footer">
+		            <button id="save2Btn" type="button" class="btn btn-primary">修改</button>
 		            <button type="button" class="btn btn-danger" data-dismiss="modal">关闭</button>
 		        </div>
 			</div><!-- /.modal-content -->

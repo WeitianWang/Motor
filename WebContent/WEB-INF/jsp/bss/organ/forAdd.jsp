@@ -6,41 +6,55 @@
 			+ request.getServerName() + ":" + request.getServerPort()
 			+ path + "/";
 %>    
-<form id="addForm" action="<%=basePath %>bss/menu/save.do" role="form" class="form-horizontal">
+<form id="addForm" action="<%=basePath %>bss/organ/save.do" role="form" class="form-horizontal">
 	<div class="form-group">
-		<label for="firstname" class="col-sm-2 control-label">机构名称：</label>
+		<label for="parentName" class="col-sm-2 control-label">上级：</label>
 		<div class="col-sm-10">
-			<input id="name" name="name" class="form-control" placeholder="必填项"/>
+			<input id="parentName" name="parentName" class="form-control" value="${parentName!=null?parentName:'无上级' }" disabled="disabled"/>
+			<input id="parentCode" name="parentCode" hidden="true" value="${parentCode }" />
 		</div>
 	</div>
 	<div class="form-group">
-		<label for="firstname" class="col-sm-2 control-label">机构别名：</label>
+		<label for="organName" class="col-sm-2 control-label">名称：</label>
 		<div class="col-sm-10">
-			<input id="uri" name="uri" class="form-control" />
+			<input id="organName" name="organName" class="form-control" placeholder="必填项" required="required"/>
 		</div>
 	</div>
 	<div class="form-group">
-		<label for="firstname" class="col-sm-2 control-label">地址：</label>
+		<label for="abbr" class="col-sm-2 control-label">别名：</label>
 		<div class="col-sm-10">
-			<input id="icon" name="icon" class="form-control"/>
+			<input id="abbr" name="abbr" class="form-control" />
 		</div>
 	</div>
 	<div class="form-group">
-		<label for="firstname" class="col-sm-2 control-label">电话：</label>
+		<label for="organType1" class="col-sm-2 control-label">类型：</label>
 		<div class="col-sm-10">
-			<input id="icon" name="icon" class="form-control" placeholder="必填项"/>
+			<input id="organType1" name="organType1" value="${organType=='02'?'部门':(organType=='03'?'职位':'单位') }" class="form-control"  disabled="disabled"/>
+			<input id="organType" name="organType" value="${organType }" hidden="true"/>
 		</div>
 	</div>
 	<div class="form-group">
-		<label for="firstname" class="col-sm-2 control-label">传真：</label>
+		<label for="addr" class="col-sm-2 control-label">地址：</label>
 		<div class="col-sm-10">
-			<input id="order" name="order"  class="form-control" />
+			<input id="addr" name="addr" class="form-control"/>
 		</div>
 	</div>
 	<div class="form-group">
-		<label for="firstname" class="col-sm-2 control-label">备注：</label>
+		<label for="tel" class="col-sm-2 control-label">电话：</label>
 		<div class="col-sm-10">
-			<textarea class="form-control" rows="3" placeholder="组织机构说明"></textarea>
+			<input id="tel" name="tel" class="form-control" placeholder="必填项" required="required"/>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="fax" class="col-sm-2 control-label">传真：</label>
+		<div class="col-sm-10">
+			<input id="fax" name="fax"  class="form-control" />
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="comments" class="col-sm-2 control-label">备注：</label>
+		<div class="col-sm-10">
+			<textarea id="comments" name="comments" class="form-control" rows="3" placeholder="组织机构说明"></textarea>
 		</div>
 	</div>
 </form>
