@@ -4,8 +4,6 @@ import java.util.List;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import org.motor.bss.menu.pojo.Menu;
 import org.motor.bss.organ.pojo.Organ;
 import org.motor.bss.organ.service.OrganService;
 import org.motorframework.core.controller.BaseController;
@@ -13,9 +11,7 @@ import org.motorframework.util.tree.JsonTree;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-
 import net.sf.json.JSONArray;
-import net.sf.json.JSONObject;
 
 /** 
  * 组织机构Controller
