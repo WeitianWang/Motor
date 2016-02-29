@@ -8,6 +8,7 @@ public class CodeInfo implements Serializable{
 	
 	private String packageName;
 	private String className;
+	private String jspPath;
 	private List<Property> properties;
 	
 	public CodeInfo(){
@@ -35,5 +36,11 @@ public class CodeInfo implements Serializable{
 	}
 	public void setProperties(List<Property> properties) {
 		this.properties = properties;
+	}
+	public String getJspPath() {
+		return jspPath;
+	}
+	public void setJspPath(String jspPath) {
+		this.jspPath = jspPath;
 	}
 }

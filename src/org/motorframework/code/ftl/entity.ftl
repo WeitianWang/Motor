@@ -4,16 +4,16 @@ public class ${code.className} implements Serializable{
 	/********** attribute ***********/
 	<#list code.properties as property>
     private ${property.type} ${property.name};
-	<!--#list-->
+	</#list>
 	
 	/********** constructors ***********/
 	public ${code.className}() {
     }
     
-    public ${code.className}(<#list code.properties as property>${property.type} ${property.name}<#if property_has_next>, <!--#if--><!--#list-->) {
+    public ${code.className}(<#list code.properties as property>${property.type} ${property.name}<#if property_has_next>, </#if></#list>) {
     <#list code.properties as property>
         this.${property.name} = ${property.name};
-    <!--#list-->
+    </#list>
     }
     
     /********** get/set ***********/
@@ -25,5 +25,5 @@ public class ${code.className} implements Serializable{
     public void set${property.name?cap_first}(${property.type} ${property.name}) {
         this.${property.name} = ${property.name};
     }
-	<!--#list-->
+	</#list>
 }

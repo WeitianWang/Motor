@@ -101,12 +101,12 @@
 		</div><!-- /.modal-dialog -->
 	</div><!-- /.modal -->
 	<!-- 修改模态框（Modal） -->
-	<div class="modal fade" id="updateModal" role="dialog" aria-labelledby="addModalLabel" aria-hidden="true">
+	<div class="modal fade" id="updateModal" role="dialog" aria-labelledby="updateModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header" style="background-color: #1BBC9B;color: white;">
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-					<h4 class="modal-title" id="addModalLabel">修改菜单</h4>
+					<h4 class="modal-title" id="updateModalLabel">修改菜单</h4>
 				</div>
 				<div id="updateContent" class="modal-body form-group">
 		        	<!-- /修改页面 -->
