@@ -3,6 +3,9 @@ public class ${code.className} implements Serializable{
 	private static final long serialVersionUID = 1L;
 	/********** attribute ***********/
 	<#list code.properties as property>
+	/**
+	 *${property.comments}
+	 */
     private ${property.type} ${property.name};
 	</#list>
 	
@@ -21,7 +24,6 @@ public class ${code.className} implements Serializable{
     public ${property.type} get${property.name?cap_first}() {
         return ${property.name};
     }
- 
     public void set${property.name?cap_first}(${property.type} ${property.name}) {
         this.${property.name} = ${property.name};
     }

@@ -1,7 +1,6 @@
 package org.motor.bss.organ.service.impl;
 
 import java.util.List;
-
 import javax.annotation.Resource;
 import org.motor.bss.organ.dao.OrganDao;
 import org.motor.bss.organ.pojo.Organ;

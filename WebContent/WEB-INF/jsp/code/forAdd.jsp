@@ -27,9 +27,14 @@
 				    <input type="text" class="form-control" id="className" name="className" placeholder="例如：User">
 				  </div>
 		      	 <div class="form-group">
-				    <label for="jspPath">JSP路径:</label>
-				    <input type="text" class="form-control" id="jspPath" name="jspPath" placeholder="例如：User">
+				    <label for="requestMapping">RequestMapping:</label>
+				    <input type="text" class="form-control" id="requestMapping" name="requestMapping" placeholder="用于访问请求地址，例如：bss/user">
 				  </div>
+		      	 <div class="form-group">
+				    <label for="jspPath">JSP路径:</label>
+				    <input type="text" class="form-control" id="jspPath" name="jspPath" placeholder="jsp页面路径，例如：bss/user">
+				  </div>
+				  <div id="props" style="display: none;"></div>
 		      </form>
 		      <div class="table-responsive">
 			      <table id="propTable" class="table table-hover">

@@ -24,6 +24,11 @@ public class StuffController  extends BaseController{
 		return viewPath + FORLIST;
 	}
 	
+	@RequestMapping(value="/forAdd.do")
+	public String forAdd(){
+		return viewPath + FORADD;
+	}
+	
 	@RequestMapping(value="/forDetail.do")
 	public String forDetail(){
 		return viewPath + FORDETAIL;
