@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="../assets/lib/sweetalert/sweetalert.css">
 <link rel="stylesheet" href="../assets/theme/AdminLTE/css/AdminLTE.css">
 <link rel="stylesheet" href="../assets/theme/AdminLTE/css/skins/_all-skins.min.css">
+<link rel="stylesheet" href="../assets/lib/bootstrapTable/bootstrap-table.min.css">
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 	<div class="wrapper">
@@ -97,6 +98,13 @@
 	<script type="text/javascript" src="../assets/js/jquery.js"></script>
 	<script type="text/javascript" src="../assets/js/motor/common.js"></script>
 	<script type="text/javascript" src="../assets/bootstrap/js/bootstrap.js"></script>
+	<script type="text/javascript" src="../assets/lib/bootstrapTable/bootstrap-table.min.js"></script>
+	<script type="text/javascript" src="../assets/lib/bootstrapTable/locale/bootstrap-table-zh-CN.min.js"></script>
+	<script type="text/javascript" src="../assets/lib/inputmask/inputmask.min.js"></script>
+	<script type="text/javascript" src="../assets/lib/inputmask/inputmask.extensions.min.js"></script>
+	<script type="text/javascript" src="../assets/lib/inputmask/inputmask.date.extensions.min.js"></script>
+	<script type="text/javascript" src="../assets/lib/inputmask/inputmask.phone.extensions.min.js"></script>
+	<script type="text/javascript" src="../assets/lib/inputmask/jquery.inputmask.min.js"></script>
 	<script type="text/javascript" src="../assets/lib/sweetalert/sweetalert.min.js"></script>
 	<script type="text/javascript" src="../assets/lib/sidebar/search/MotorSearchForm.js"></script>
 	<script type="text/javascript" src="../assets/lib/sidebar/user-panel/UserPanel.js"></script>
